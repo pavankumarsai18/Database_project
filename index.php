@@ -1,7 +1,7 @@
 <?php
 	include_once 'includes.php';
-	include_once 'DB.sql';
 ?>
+
 
 <html>
   <head>
@@ -11,35 +11,39 @@
 
   <body>
 
-<!--   	<?php
-  		// $sql = "SELECT * FROM Student;";
-
-  		// $result = mysqli_query($conn, $sql);
-  		 // $resultCheck = mysqli_num_rows($result);
-  		// if($resultCheck > 0)
-  		// {
-  		// 	while($row = mysqli_fetch_assoc($result))
-  		// 		echo $row['S_id']," ",$row['password']," ",$row['University'];
-  		// }
-  		
-  	 ?> -->
-
 	<div style="background-image: url(https://i.ytimg.com/vi/zMeWdNrlX-w/maxresdefault.jpg)">
 
     <div class="row">
       <div class="col-md-4">
         <h3> Apartment Search Login </h3>
-        <form action="ok.php" metod="post">
+        <form action="index.php" method="post">
           <div class="form-group">
             <label> username </label>
-            <input type="text" name="username" class="form-control" required> </div>
-
+            <input type="text" name= "username" class="form-control" required> </div>
             <div class="form-group">
-              <label> password </label>
-              <input type="password" name="psswd" class="form-control" required> </div>
-              <button type="submit" class="btn btn-primary"> Log In </button>
-
+            <label> password </label>
+            <input type="password" name="psswd" class="form-control" required> </div>
+            <button type="submit" class="btn btn-primary"> Log In </button>
           </form>
+        
+        <?php 
+              $username = $_POST["username"];
+              $password =  $_POST["psswd"];
+
+              $sql = "SELECT * FROM Student WHERE username = '$username' ";
+            
+              $result = mysqli_query($conn,$sql);
+              $num_rows = mysqli_num_rows($result);
+
+              if($num_rows > 0)
+              {
+                $row = mysqli_fetch_assoc($result);
+                if($row['password'] == $password)
+                  echo 'Welcome ', $username, ' !!!!';
+                else
+                  echo 'Invalid Password Try Again!!!\n';
+              }
+        ?>
 	</div>
 
 	</div>

@@ -74,7 +74,7 @@
               </form>
         </div>
       </div>
-<div class="col-md-4">
+<!-- <div class="col-md-4">
 <h3> Mission</h3>
 <h9>
 The sole purpose of a mission statement is to serve as a company's goal/agenda, it outlines clearly what the goal is. Some generic examples of mission statements would be, "To provide the best service possible within the banking sector for our customers." or "To provide the best experience for all of our customers." The reason why businesses make use of mission statements is to make it clear what they look to achieve as an organization, not only to themselves and their employees but to the customers and other people who are a part of the business, such as shareholders. As a company evolves, so will their mission statement. This is to make sure that the company remains on track and to ensure that the mission statement does not lose its touch and become boring or stale.
@@ -98,7 +98,7 @@ Wikipedia is a live collaboration differing from paper-based reference sources i
 
 See also: Wikipedia:FAQ and Wikipedia:Citing Wikipedia
 </h9>
-</div>
+</div> -->
 
 
 </div>

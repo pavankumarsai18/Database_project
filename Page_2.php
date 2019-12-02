@@ -109,5 +109,8 @@
 
         ?>
   </div>
+  <footer>
+        Data Pirates, COP4710 Fall 2019, FSU, group project
+      </footer>
   </body>
 </html>

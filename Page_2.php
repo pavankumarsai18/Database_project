@@ -3,7 +3,18 @@
                 <title> Preferences </title>
                 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
               </head>
-
+<style>
+                  body{
+                      background-image: url("https://webengage.com/blog/wp-content/uploads/sites/4/2019/05/Geofencing-01.gif");
+                  }
+                  footer{
+                    background: black;
+                     color: gray;
+                    font-size: 12px;
+                    padding: 20px 20px;
+                    text-align: center;
+                }
+              </style>
     <body>
     </div>
     <div class="col-md-4" style="background-image: url(https://i.imgur.com/6YuRxJA.png)">

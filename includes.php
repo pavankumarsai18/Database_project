@@ -5,5 +5,4 @@
     $dbPassword = "";                // default
     $dbName = "DB";
     $conn = mysqli_connect($dbServerName, $dbUsername,$dbPassword, $dbName);        // Connect Database
- 
 ?>

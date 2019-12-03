@@ -4,10 +4,13 @@ CREATE TABLE Student
 	Last_name TEXT NOT NULL,
 	Username TEXT NOT NULL,
 	Passwd TEXT NOT NULL,
+	Age int NOT NULL,
 	City TEXT NOT NULL,
 	S_id int(32) NOT NULL AUTO_INCREMENT,
 	Preferences TEXT NOT NULL,
-	CONSTRAINT id PRIMARY KEY(S_id)	
+	Points INT NOT NULL,
+	CONSTRAINT id PRIMARY KEY(S_id)
+	
 )
 
 

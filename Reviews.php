@@ -161,6 +161,17 @@ $(document).ready(function () {
     });
 });
 </script>
+
+    <form action = "index.php" method = post>
+    <button type = "submit" name = "logout">Logout</button>
+  </form>
+    <?php
+        if(isset($_POST['logout'])){
+        echo("Logged out");
+        sleep(3);
+        session_destroy();
+      }
+    ?>
   </body>
 
 <!-- <!DOCTYPE HTML>

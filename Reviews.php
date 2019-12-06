@@ -1,8 +1,6 @@
 <?php 
 	include_once 'includes.php';
 	session_start();
-	//print_r($_SESSION);
-
 ?>
 
 <!DOCTYPE HTML>
@@ -18,7 +16,9 @@
   </head>
 
   <body>
-    <p>MAP</p>
+    <br>
+
+    <p>Enter the university Again</p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -35,15 +35,18 @@
     </div>
 </form>
 
-<!-- display google map -->
+
 <div id="geomap"></div>
 
-<!-- display selected location information -->
 <h4>Location Details</h4>
 <p>Address: <input type="text" class="search_addr" size="45"></p>
-<p>Latitude: <input type="text" class="search_latitude" size="30"></p>
-<p>Longitude: <input type="text" class="search_longitude" size="30"></p>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWVzvOW3pEdd6e-W4nOLTEd0QM9sxN0nE"></script>
+<p>Latitude: <input type="text" name = "lat" class="search_latitude" size="30"></p>
+<p>Longitude: <input type="text" name = "lng" class="search_longitude" size="30"></p>
+</form>
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWVzvOW3pEdd6e-W4nOLTEd0QM9sxN0nE"></script>
 
 
     <script>
@@ -51,9 +54,6 @@ var geocoder;
 var map;
 var marker;
 
-/*
- * Google Map with marker
- */
 function initialize() {
     var initialLat = $('.search_latitude').val();
     var initialLong = $('.search_longitude').val();
@@ -128,9 +128,7 @@ $(document).ready(function () {
         });
     });
     
-    /*
-     * Point location on google map
-     */
+
     $('.get_map').click(function (e) {
         var address = $(PostCodeid).val();
         geocoder.geocode({'address': address}, function (results, status) {
@@ -140,6 +138,20 @@ $(document).ready(function () {
                 $('.search_addr').val(results[0].formatted_address);
                 $('.search_latitude').val(marker.getPosition().lat());
                 $('.search_longitude').val(marker.getPosition().lng());
+
+                var lat_lng = {};
+                lat_lng.lat = marker.getPosition().lat();
+                lat_lng.lng = marker.getPosition().lng();
+
+                $.ajax({
+                    url: "Data_coor.php",
+                    method: "post",
+                    data: lat_lng,
+                    success: function (res){
+                        console.log(res);
+                    } 
+                })
+
             } else {
                 alert("Geocode was not successful for the following reason: " + status);
             }
@@ -147,7 +159,7 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
-    //Add listener to marker for reverse geocoding
+   
     google.maps.event.addListener(marker, 'drag', function () {
         geocoder.geocode({'latLng': marker.getPosition()}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
@@ -155,9 +167,12 @@ $(document).ready(function () {
                     $('.search_addr').val(results[0].formatted_address);
                     $('.search_latitude').val(marker.getPosition().lat());
                     $('.search_longitude').val(marker.getPosition().lng());
+
+                    
                 }
             }
         });
+
     });
 });
 </script>
@@ -172,45 +187,5 @@ $(document).ready(function () {
         session_destroy();
       }
     ?>
-  </body>
+</body>
 
-<!-- <!DOCTYPE HTML>
-
-<html>
-  <head>
-      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  </head>
-
-  <body>
-    <form action = "Reviews.php" method = "post">
-      <label>University</label>
-      <input type = "text" id = "search" class = "form-control" name = "university">
-      <br>
-      <button type = "submit" name = "button" class = "btn-primary">Submit</button>
-    </form>
-
-    <script>
-      function activatePlacesSearch()
-      {
-        var input = document.getElementById('search');
-        var autocomplete = new google.maps.places.Autocomplete((input), {types: ['geocode']});
-        console.log(autocomplete);
-
-        // google.maps.event.addListener(autocomplete, 'place changed', function()
-        // {
-        //   var near_place = autocomplete.getPlace();
-        //   //document.getElementById('latitude_input').value = 
-        //   console.log(near_place.geometry.location.lat());
-        //   //document.getElementById('longitude_input').value =
-        //   console.log(near_place.geometry.location.lng());
-
-        // })
-      }
-    </script>
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWVzvOW3pEdd6e-W4nOLTEd0QM9sxN0nE&libraries=places&callback=activatePlacesSearch"></script>
-
-  </body>
-
-</html>
- -->

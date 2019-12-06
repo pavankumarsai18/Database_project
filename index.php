@@ -42,13 +42,16 @@
           <form action="index.php" method="post">
             
             <div class="form-group">
-              <label> username </label>
-              <input type="text" name= "username" class="form-control" required>
-            </div>
+              <h5> username </h5>
+              <input type="text" name= "username1" class="form-control" required>
             
-            <div class="form-group">
-              <label> password </label>
-              <input type="password" name="psswd" class="form-control" required>
+              <h5> ID </h5>
+              <input type="text" name="id" class="form-control" required>
+
+              <h5> password </h5>
+              <input type="password" name="psswd1" class="form-control" required>
+
+
             </div>
             
             <button type="submit" name = "log_in"class="btn btn-primary"> Log In </button>
@@ -80,7 +83,7 @@
 
 
               <label> Age</label>
-              <input type="password" name="age" class="form-control" required>
+              <input type="text" name="age" class="form-control" required>
 
 
               <label> City </label>
@@ -94,31 +97,21 @@
 
                 if(isset($_POST["log_in"]))
                 {
-                    if(isset($_POST['username']))
+                    if(isset($_POST['username1']) &&isset($_POST['psswd1']))
                     {
-                      $_SESSION['username'] = htmlspecialchars($_POST['username']);
-                      //echo($_SESSION['username']);
-                      $username = htmlspecialchars($_POST['username']);
-                    }
-                    
-                    if(isset($_POST['psswd']))
-                    {
+                      $_SESSION['username'] = htmlspecialchars($_POST['username1']);
+                      $username = htmlspecialchars($_POST['username1']);
                       
-                      $password =  htmlspecialchars($_POST['psswd']);
+                      $password =  htmlspecialchars($_POST['psswd1']);
 
-                      $sql = "SELECT * FROM Student WHERE username = '$username' ";
+                      $s_id = htmlspecialchars($_POST['id']);
 
-                      $result = mysqli_query($conn,$sql);
-                      $num_rows = mysqli_num_rows($result);
+                      $_SESSION['S_id']= $s_id;
+                      $_SESSION['psswd'] = $password;
 
-                      if($num_rows > 0)
-                      {
-                        $row = mysqli_fetch_assoc($result);
-                        if($row['password'] == $password)
-                          echo 'Welcome ', $username, ' !!!!';
-                        //else
-                          //echo 'Invalid Password Try Again!!!\n';
-                      }
+                      header("Location: ./sort.php");
+
+
                     }
                 }
 

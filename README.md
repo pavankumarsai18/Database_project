@@ -11,6 +11,7 @@ This is a web application that helps students search for apartments nearby their
 * [Further Improvements](#Further-Improvements)
 
 ## How to use
+To use this simply download the sc code and paste a valid Google API key in 'Page_2.php'.
 
 ## All the web pages
 |Web Page| Description|
@@ -27,9 +28,23 @@ This is a web application that helps students search for apartments nearby their
 * Distance Calculation
 * Sorting Apartments based on attributes
 * Adding comments and reviews
+* Dispalying the map
+* Auto Complete
 
-## Testing
-This web application was tested by using manual input. XAMPP was used as a database.
+### Distance Calculation
+User will be asked to enter the adress of his university and pick the location of the apartment. This web app calculates the distance between the university and the aparment for all the apartments chosen.
+
+### Sorting Apartments
+User can sort the apartments on various attributes which are rent, rating, and distane. This web app sorts them fromdecreasing to increasing order.
+
+### Adding comments and reviews
+Users can add reviews about the apartment they live in. This will help other users know about the quality of apartments.
+
+### Displaying the map
+This web app uses Map JS API to display the map. Apart from simply displaying the map, this application uses geocodeing, geoLocation, to get information about locations.
+
+### Auto Complete
+This web app uses AutoComplete feature when the user tries to enter an adress. This auto complete is linked with the map.
 
 ## Technologies Used
 * HTML
@@ -41,8 +56,15 @@ This web application was tested by using manual input. XAMPP was used as a datab
 * Google APIs
 * XAMPP
 
+## Testing
+This web application was tested by using manual input. XAMPP was used as a database and to host the website locally.
+
 ## Libraries Used
+
 ## Credits
+* Me (Pavan Vadrevu)
+* Humbert
+* Schmidt
 
 ## Further Improvements
 We can further improve the web application by increasing the updating data in database.

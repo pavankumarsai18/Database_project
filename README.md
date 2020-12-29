@@ -6,7 +6,7 @@ This is a web application that helps students search for apartments nearby their
 * [Technologies Used](#Technologies-Used)
 * [Functionalities](#Functionalities)
 * [Testing](#Testing)
-* [Libraries Used & APIs](#Libraries-Used)
+* [DataStructures Used](#DataStructures-Used)
 * [Credits](#Credits)
 * [Further Improvements](#Further-Improvements)
 
@@ -59,7 +59,13 @@ This web app uses AutoComplete feature when the user tries to enter an adress. T
 ## Testing
 This web application was tested by using manual input. XAMPP was used as a database and to host the website locally.
 
-## Libraries Used
+## DataStructures Used
+* Caching 
+* Cookies
+* HashMaps
+* Arrays
+
+This web application used Caching and cookies because it made storing the user information easier. Apart from simply stroing the user information this also made the website faster.
 
 ## Credits
 * Me (Pavan Vadrevu)

@@ -5,6 +5,7 @@ This is a web application that helps students search for apartments nearby their
 * [All the web pages](#All-web-pages)
 * [Technologies Used](#Technologies-Used)
 * [Functionalities](#Functionalities)
+* [DataBase](#DataBade)
 * [Testing](#Testing)
 * [DataStructures Used](#DataStructures-Used)
 * [Credits](#Credits)
@@ -42,9 +43,11 @@ Users can add reviews about the apartment they live in. This will help other use
 
 ### Displaying the map
 This web app uses Map JS API to display the map. Apart from simply displaying the map, this application uses geocodeing, geoLocation, to get information about locations.
+![Map](/pics/Address.png)
 
 ### Auto Complete
 This web app uses AutoComplete feature when the user tries to enter an adress. This auto complete is linked with the map.
+![AutoComplete](/pics/Autocomplete.png)
 
 ## Technologies Used
 * HTML
@@ -56,6 +59,11 @@ This web app uses AutoComplete feature when the user tries to enter an adress. T
 * Google APIs
 * XAMPP
 
+## DataBase
+This web application uses mySQL database. The database is stored in an application called 'XAMPP'. The tables are shown below. The tables are descinged in such a way to minimize redundancies and to maximize effieciency. 
+
+![DataBase](/pics/DB.png)
+
 ## Testing
 This web application was tested by using manual input. XAMPP was used as a database and to host the website locally.
 
@@ -65,7 +73,7 @@ This web application was tested by using manual input. XAMPP was used as a datab
 * HashMaps
 * Arrays
 
-This web application used Caching and cookies because it made storing the user information easier. Apart from simply stroing the user information this also made the website faster.
+This web application used Caching and cookies because it made storing the user information easier. Apart from simply storing the user information this also made the website faster.
 
 ## Credits
 * Me (Pavan Vadrevu)

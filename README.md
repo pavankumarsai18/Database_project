@@ -12,9 +12,19 @@ This is a website that helps students search for apartments nearby their univers
 
 ## How to use
 ## All the web pages
-## Technologies Used
-## Functionalities Implementation
+## Functionalities Implemented
 ## Testing
+This wa
+## Technologies Used
+* HTML
+* CSS
+* JavaScript
+* Php
+* SQL
+* Ajax
+* Google APIs
+
 ## Libraries Used
 ## Credits
 ## Further Improvements
+We can 

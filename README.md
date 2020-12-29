@@ -1,5 +1,5 @@
 # Apartment Search
-This is a website that helps students search for apartments nearby their university. The Database is not provided in this implementation.
+This is a web application that helps students search for apartments nearby their university. The Database is not provided in this implementation.
 
 * [How to use](#how-to-use)
 * [All the web pages](#All-web-pages)
@@ -11,10 +11,17 @@ This is a website that helps students search for apartments nearby their univers
 * [Further Improvements](#Further-Improvements)
 
 ## How to use
+
 ## All the web pages
+
 ## Functionalities Implemented
+* Distance Calculation
+* Sorting Apartments based on attributes
+* Adding comments and reviews
+
 ## Testing
-This wa
+This web application was tested by using manual input. XAMPP was used as a database.
+
 ## Technologies Used
 * HTML
 * CSS
@@ -23,8 +30,10 @@ This wa
 * SQL
 * Ajax
 * Google APIs
+* XAMPP
 
 ## Libraries Used
 ## Credits
+
 ## Further Improvements
-We can 
+We can further improve the web application by increasing the updating data in database.

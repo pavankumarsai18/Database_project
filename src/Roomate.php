@@ -7,7 +7,7 @@
 	 $S_id = $_SESSION['S_id'];
 	 // $uni = $_SESSION['uni'];
 
-	 $sql = "SELECT a.First_name, a.Username, a.University, a.Preferences FROM Student a, Apt_complex b, Prefers_cmplx c WHERE a.S_id <> 84 AND a.S_id = c.S_id AND b.A_id = c.A_id;";
+	 $sql = "SELECT a.First_name, a.Username, a.University, a.Preferences FROM Student a, Apt_complex b, Prefers_cmplx c WHERE a.S_id = c.S_id AND b.A_id = c.A_id;";
 	 //echo($sql);
 	 $result= mysqli_query($conn, $sql);
 	 //$result_check = mysqli_num_rows($result);

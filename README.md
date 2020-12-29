@@ -13,6 +13,12 @@ This is a web application that helps students search for apartments nearby their
 ## How to use
 
 ## All the web pages
+|Web Page| Description|
+|---------|------------|
+|index| Log in or Signs up users|
+|---------|-------------------------|
+|Page_2| Get the information from user|
+|------|-------------------------------|
 
 ## Functionalities Implemented
 * Distance Calculation

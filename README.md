@@ -16,9 +16,12 @@ This is a web application that helps students search for apartments nearby their
 |Web Page| Description|
 |---------|------------|
 |index| Log in or Signs up users|
-|---------|-------------------------|
 |Page_2| Get the information from user|
-|------|-------------------------------|
+|preferences| Get the preferences from user|
+|Page_3| Sort the available apartments by the given menthods|
+|Rent| Get the information of apartment|
+|Reviews| Display the reviews of apartment|
+|Roomate| Select the roommate|
 
 ## Functionalities Implemented
 * Distance Calculation
